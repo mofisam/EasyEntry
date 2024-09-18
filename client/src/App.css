@@ -5,38 +5,815 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/*-------------------------------------------------------------------------------*/
+/* /frontend/src/components/Events/EventList.css */
+
+.event-list-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.filter-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.filter-section form {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-section select,
+.filter-section input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #218838;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: 15px;
+}
+
+.event-details h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.event-details p {
+  margin: 0 0 5px;
+  color: #666;
+}
+
+.details-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.details-btn:hover {
+  background-color: #0056b3;
+}
+
+/* /frontend/src/components/Common/Home.css */
+
+/* Hero Section */
+.hero-section {
+  background-image: url('https://example.com/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-section .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 60px 20px;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.hero-section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* Categories Section */
+.category-card {
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+}
+
+.category-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Featured Events Section */
+.event-card {
+  transition: transform 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+}
+
+.event-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-section h5 {
+  margin-bottom: 20px;
+}
+
+/* /frontend/src/components/Common/About.css */
+
+/* Hero Section */
+.about-hero-section {
+  background-image: url('https://example.com/about-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-hero-section .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 60px 20px;
+}
+
+.about-hero-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.about-hero-section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.about-hero-section button {
+  color: #333;
+  background-color: #f8f9fa;
+  border: none;
+}
+
+/* Mission Section */
+.mission-section {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+}
+
+.mission-section h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+.mission-section p {
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* How It Works Section */
+.how-it-works-section .how-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.how-card .card-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.how-card .card-text {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Our Values Section */
+.our-values-section {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+}
+
+.value-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.value-card .card-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.value-card .card-text {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Footer Section */
+.about-footer-section {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.about-footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.about-footer-section a:hover {
+  text-decoration: underline;
+}
+
+.about-footer-section h5 {
+  margin-bottom: 20px;
+}
+/* /frontend/src/components/Common/Contact.css */
+
+/* Hero Section */
+.contact-hero-section {
+  background-image: url('https://example.com/contact-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.contact-hero-section .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 20px;
+}
+
+.contact-hero-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.contact-hero-section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+}
+
+.contact-form-section h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+.contact-form-section form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-section .form-label {
+  color: #555;
+}
+
+/* Contact Information Section */
+.contact-info-section {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+}
+
+.contact-info-section h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+.contact-info-section p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Footer Section */
+.contact-footer-section {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.contact-footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-footer-section a:hover {
+  text-decoration: underline;
+}
+
+.contact-footer-section h5 {
+  margin-bottom: 20px;
+}
+
+/* /frontend/src/components/Common/EventDetails.css */
+
+/* Event Banner */
+.event-banner {
+  background-image: url('https://example.com/event-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.event-banner .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+}
+
+.event-banner h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.event-banner p {
+  font-size: 20px;
+  color: #ddd;
+}
+
+/* Event Details Section */
+.event-details-section h2 {
+  font-size: 32px;
+  color: #333;
+}
+
+.event-details-section h5 {
+  font-size: 20px;
+  color: #555;
+}
+
+.event-details-section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.event-details-section ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Ticketing Section */
+.ticketing-section h2 {
+  font-size: 32px;
+  color: #333;
+}
+
+.ticketing-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Related Events Section */
+.related-events-section h2 {
+  font-size: 32px;
+  color: #333;
+}
+
+.related-event-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.related-event-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.related-event-card img {
+  border-radius: 8px;
+}
+
+.related-event-card h5 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.related-event-card p {
+  font-size: 14px;
+  color: #777;
+}
+
+.related-event-card button {
+  margin-top: 10px;
+}
+
+/* /frontend/src/components/Common/BookTickets.css */
+h1 {
+  font-weight: bold;
+  color: #333;
 }
 
 .card {
-  padding: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.card-header h4 {
+  font-size: 24px;
+  color: #444;
+}
+
+.card-body p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* /frontend/src/components/Common/Payment.css */
+
+.payment-page h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-header h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-label {
+  font-size: 16px;
+  color: #555;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-body {
+  font-size: 16px;
+}
+
+.button {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.payment-icon i {
+  font-size: 24px;
+  color: #28a745;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* /frontend/src/components/CreateEvent.css */
+.create-event-page h1 {
+  font-weight: bold;
+  color: #333;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.form-label {
+  font-size: 16px;
+  color: #555;
+}
+
+button {
+  font-size: 18px;
+  padding: 12px 20px;
+  width: 100%;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+textarea {
+  resize: none;
+}
+
+/* /frontend/src/components/ManageEvents.css */
+
+.manage-events-page h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.table-dark {
+  background-color: #343a40;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table td button {
+  width: 100px;
+}
+
+button.btn-info {
+  background-color: #17a2b8;
+  border: none;
+}
+
+button.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* /frontend/src/components/ManageBookings.css */
+
+.manage-bookings-page h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.table-dark {
+  background-color: #343a40;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table td button {
+  width: 100px;
+}
+
+button.btn-info {
+  background-color: #17a2b8;
+  border: none;
+}
+
+button.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* /frontend/src/components/Signup.css */
+
+.signup-container {
+  margin-top: 50px;
+}
+
+.signup-card {
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.signup-card h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* /frontend/src/components/Profile.css */
+
+.profile-page {
+  margin-top: 50px;
+}
+
+.profile-card {
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* /frontend/src/components/Login.css */
+
+.login-container {
+  margin-top: 80px;
+}
+
+.login-card {
+  border-radius: 15px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.text-center p {
+  margin-top: 10px;
+  color: #555;
+}
+
+.text-center a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.text-center a:hover {
+  text-decoration: underline;
 }

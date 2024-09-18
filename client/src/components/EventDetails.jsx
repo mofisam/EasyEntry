@@ -1,7 +1,7 @@
 // /frontend/src/components/Common/EventDetails.js
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import './EventDetails.css';
+import '../App.css';
 
 const EventDetails = () => {
   return (
