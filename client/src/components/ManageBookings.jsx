@@ -1,7 +1,7 @@
 // /frontend/src/components/ManageBookings.js
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Table, Button, Modal } from 'react-bootstrap';
-import './ManageBookings.css';
+import '../App.css';
 
 const ManageBookings = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);

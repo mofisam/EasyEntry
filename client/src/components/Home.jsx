@@ -1,7 +1,7 @@
 // /frontend/src/components/Common/Home.js
 import React from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import './Home.css';
+import '../App.css';
 
 const Home = () => {
   return (

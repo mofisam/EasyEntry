@@ -1,7 +1,7 @@
 // /frontend/src/components/Common/BookTickets.js
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import './BookTickets.css';
+import '../App.css';
 
 const BookTickets = () => {
   const [ticketType, setTicketType] = useState('');

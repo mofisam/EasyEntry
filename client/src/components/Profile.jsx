@@ -1,7 +1,7 @@
 // /frontend/src/components/Profile.js
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
-import './Profile.css';
+import '../App.css';
 
 const Profile = () => {
   const [isEditing, setIsEditing] = useState(false);

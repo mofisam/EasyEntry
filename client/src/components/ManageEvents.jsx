@@ -1,7 +1,7 @@
 // /frontend/src/components/ManageEvents.js
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Table, Button, Modal } from 'react-bootstrap';
-import './App.css';
+import '../App.css';
 
 const ManageEvents = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);

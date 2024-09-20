@@ -1,7 +1,7 @@
 // /frontend/src/components/Common/Contact.js
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import './Contact.css';
+import '../App.css';
 
 const Contact = () => {
   return (

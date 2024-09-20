@@ -1,6 +1,6 @@
 // /frontend/src/components/Events/EventList.js
 import React, { useState, useEffect } from 'react';
-import './EventList.css';
+import '../App.css';
 
 const EventList = () => {
   const [events, setEvents] = useState([]);

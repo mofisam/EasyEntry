@@ -1,10 +1,19 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
 }
-
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+button {
+  padding: 12px 20px;
+  width: 100%;
+}
 /*-------------------------------------------------------------------------------*/
 /* /frontend/src/components/Events/EventList.css */
 
@@ -507,11 +516,6 @@ h1 {
   margin-bottom: 10px;
 }
 
-button {
-  font-size: 18px;
-  padding: 10px 20px;
-}
-
 a {
   color: #007bff;
   text-decoration: none;
@@ -548,11 +552,6 @@ a:hover {
   font-size: 16px;
 }
 
-.button {
-  font-size: 18px;
-  padding: 10px 20px;
-}
-
 .payment-icon i {
   font-size: 24px;
   color: #28a745;
@@ -585,16 +584,6 @@ a:hover {
 .form-label {
   font-size: 16px;
   color: #555;
-}
-
-button {
-  font-size: 18px;
-  padding: 12px 20px;
-  width: 100%;
-  background-color: #007bff;
-  border: none;
-  color: white;
-  border-radius: 5px;
 }
 
 button:hover {
@@ -714,15 +703,6 @@ button.btn-danger:hover {
   font-weight: 500;
 }
 
-button {
-  padding: 12px;
-  font-size: 16px;
-  background-color: #007bff;
-  border: none;
-  color: #fff;
-  border-radius: 5px;
-}
-
 button:hover {
   background-color: #0056b3;
 }
@@ -757,12 +737,6 @@ p {
   color: #555;
 }
 
-button {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-}
-
 button:focus {
   outline: none;
   box-shadow: none;
@@ -789,15 +763,6 @@ button:focus {
 .form-label {
   font-size: 16px;
   font-weight: 500;
-}
-
-button {
-  padding: 12px;
-  font-size: 16px;
-  background-color: #007bff;
-  border: none;
-  color: #fff;
-  border-radius: 5px;
 }
 
 button:hover {

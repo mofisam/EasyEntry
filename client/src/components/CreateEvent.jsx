@@ -1,7 +1,7 @@
 // /frontend/src/components/CreateEvent.js
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import './CreateEvent.css';
+import '../App.css';
 
 const CreateEvent = () => {
   const [eventDetails, setEventDetails] = useState({
